@@ -9,3 +9,6 @@ Fetches all unresolved review comments from the current branch's GitHub PR and a
 
 ### [`test-gap-finder`](./test-gap-finder/SKILL.md)
 Analyzes a git diff (or specific files) and finds untested code paths — error throws, null inputs, branching logic, async failures. Prints a gap report grouped by file, then writes real runnable test stubs (not just TODO scaffolding) in the right test file using whatever framework the project uses.
+
+### [`dead-code-hunter`](./dead-code-hunter/SKILL.md)
+Scans the codebase for code that is defined but never used: exported functions nobody imports, private helpers never called, module-level constants never referenced, and entire files nothing depends on. Produces a concise scannable report grouped by category with file:line references, and warns about false positive risks (dynamic access, external consumers, framework decorators).
